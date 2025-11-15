@@ -296,7 +296,7 @@ matrix_sf *execute_script_sf(char *filename) {
 
         char name = *p;
         p++;
-        while (*p == ' ') p++;
+        while (*p == ' ') p++; //Unfinished
     }
 
     fclose(file);
