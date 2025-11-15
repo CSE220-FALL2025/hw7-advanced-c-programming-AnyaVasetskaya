@@ -1,0 +1,13 @@
+==34520== Memcheck, a memory error detector
+==34520== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==34520== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==34520== Command: ./bin/mult01
+==34520== 
+==34520== 
+==34520== HEAP SUMMARY:
+==34520==     in use at exit: 0 bytes in 0 blocks
+==34520==   total heap usage: 3 allocs, 3 frees, 412 bytes allocated
+==34520== 
+==34520== All heap blocks were freed -- no leaks are possible
+==34520== 
+==34520== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
