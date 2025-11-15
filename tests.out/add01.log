@@ -1,0 +1,13 @@
+==21219== Memcheck, a memory error detector
+==21219== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==21219== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==21219== Command: ./bin/add01
+==21219== 
+==21219== 
+==21219== HEAP SUMMARY:
+==21219==     in use at exit: 0 bytes in 0 blocks
+==21219==   total heap usage: 3 allocs, 3 frees, 180 bytes allocated
+==21219== 
+==21219== All heap blocks were freed -- no leaks are possible
+==21219== 
+==21219== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

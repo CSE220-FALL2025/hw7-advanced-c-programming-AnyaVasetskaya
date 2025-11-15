@@ -1,0 +1,22 @@
+==21163== Memcheck, a memory error detector
+==21163== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==21163== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==21163== Command: ./bin/free_bst03
+==21163== 
+==21163== 
+==21163== HEAP SUMMARY:
+==21163==     in use at exit: 228 bytes in 19 blocks
+==21163==   total heap usage: 19 allocs, 0 frees, 228 bytes allocated
+==21163== 
+==21163== 228 bytes in 19 blocks are definitely lost in loss record 1 of 1
+==21163==    at 0x4885250: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-arm64-linux.so)
+==21163==    by 0x108B67: main (free_bst03.c:8)
+==21163== 
+==21163== LEAK SUMMARY:
+==21163==    definitely lost: 228 bytes in 19 blocks
+==21163==    indirectly lost: 0 bytes in 0 blocks
+==21163==      possibly lost: 0 bytes in 0 blocks
+==21163==    still reachable: 0 bytes in 0 blocks
+==21163==         suppressed: 0 bytes in 0 blocks
+==21163== 
+==21163== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

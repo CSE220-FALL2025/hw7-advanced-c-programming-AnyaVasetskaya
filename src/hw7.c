@@ -12,15 +12,60 @@ void free_bst_sf(bst_sf *root) {
 }
 
 matrix_sf* add_mats_sf(const matrix_sf *mat1, const matrix_sf *mat2) {
-    return NULL;
+    unsigned int rows = mat1->num_rows;
+    unsigned int cols = mat1->num_cols;
+
+    matrix_sf *result = malloc(sizeof(matrix_sf) + rows*cols * sizeof(int));
+
+    result->num_rows = rows;
+    result->num_cols = cols;
+
+    for (int i = 0; i < rows*cols; i++) {
+        result->values[i] = mat1->values[i] + mat2->values[i];
+    }
+
+    return result;
 }
 
 matrix_sf* mult_mats_sf(const matrix_sf *mat1, const matrix_sf *mat2) {
-   return NULL;
+    unsigned int rows = mat1->num_rows;
+    unsigned int common = mat1->num_cols;
+    unsigned int cols = mat2->num_cols;
+
+    matrix_sf *result = malloc(sizeof(matrix_sf) + rows*cols * sizeof(int));
+
+    result->num_rows = rows;
+    result->num_cols = cols;
+
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            int sum = 0;
+            for(int k = 0; k < common; k++) {
+                sum += mat1->values[i * common + k] * mat2->values[k * cols + j];
+            }
+            result->values[i * common + j] = sum;
+        }
+    }
+    
+    return result;
 }
 
 matrix_sf* transpose_mat_sf(const matrix_sf *mat) {
-    return NULL;
+    unsigned int rows = mat->num_cols;
+    unsigned int cols = mat->num_rows;
+
+    matrix_sf *result = malloc(sizeof(matrix_sf) + rows*cols * sizeof(int));
+
+    result->num_rows = rows;
+    result->num_cols = cols;
+
+    for(int i = 0; i < rows; i++) {
+        for(int j = 0; j < cols; j++) {
+            result->values[i * cols + j] = mat->values[j * rows + i];
+        }
+    }
+
+    return result;
 }
 
 matrix_sf* create_matrix_sf(char name, const char *expr) {

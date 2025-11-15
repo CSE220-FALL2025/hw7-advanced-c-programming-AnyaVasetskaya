@@ -1,0 +1,24 @@
+==20976== Memcheck, a memory error detector
+==20976== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==20976== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==20976== Command: ./bin/execute_script script10
+==20976== 
+execute_script: src/hw7.c:101: print_matrix_sf: Assertion `mat != NULL' failed.
+==20976== 
+==20976== Process terminating with default action of signal 6 (SIGABRT)
+==20976==    at 0x4947608: __pthread_kill_implementation (pthread_kill.c:44)
+==20976==    by 0x48FCB3B: raise (raise.c:26)
+==20976==    by 0x48E7DFF: abort (abort.c:79)
+==20976==    by 0x48F5CBF: __assert_fail_base (assert.c:96)
+==20976==    by 0x48F5D2F: __assert_fail (assert.c:105)
+==20976==    by 0x10906F: print_matrix_sf (hw7.c:101)
+==20976==    by 0x108B6B: main (execute_script.c:9)
+==20976== 
+==20976== HEAP SUMMARY:
+==20976==     in use at exit: 0 bytes in 0 blocks
+==20976==   total heap usage: 5 allocs, 5 frees, 1,937 bytes allocated
+==20976== 
+==20976== All heap blocks were freed -- no leaks are possible
+==20976== 
+==20976== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+Aborted (core dumped)
