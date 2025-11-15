@@ -1,22 +1,22 @@
-==21159== Memcheck, a memory error detector
-==21159== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
-==21159== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
-==21159== Command: ./bin/free_bst02
-==21159== 
-==21159== 
-==21159== HEAP SUMMARY:
-==21159==     in use at exit: 72 bytes in 6 blocks
-==21159==   total heap usage: 6 allocs, 0 frees, 72 bytes allocated
-==21159== 
-==21159== 72 bytes in 6 blocks are definitely lost in loss record 1 of 1
-==21159==    at 0x4885250: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-arm64-linux.so)
-==21159==    by 0x108B63: main (free_bst02.c:8)
-==21159== 
-==21159== LEAK SUMMARY:
-==21159==    definitely lost: 72 bytes in 6 blocks
-==21159==    indirectly lost: 0 bytes in 0 blocks
-==21159==      possibly lost: 0 bytes in 0 blocks
-==21159==    still reachable: 0 bytes in 0 blocks
-==21159==         suppressed: 0 bytes in 0 blocks
-==21159== 
-==21159== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==31860== Memcheck, a memory error detector
+==31860== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==31860== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==31860== Command: ./bin/free_bst02
+==31860== 
+==31860== 
+==31860== HEAP SUMMARY:
+==31860==     in use at exit: 72 bytes in 6 blocks
+==31860==   total heap usage: 6 allocs, 0 frees, 72 bytes allocated
+==31860== 
+==31860== 72 bytes in 6 blocks are definitely lost in loss record 1 of 1
+==31860==    at 0x4885250: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-arm64-linux.so)
+==31860==    by 0x108B63: main (free_bst02.c:8)
+==31860== 
+==31860== LEAK SUMMARY:
+==31860==    definitely lost: 72 bytes in 6 blocks
+==31860==    indirectly lost: 0 bytes in 0 blocks
+==31860==      possibly lost: 0 bytes in 0 blocks
+==31860==    still reachable: 0 bytes in 0 blocks
+==31860==         suppressed: 0 bytes in 0 blocks
+==31860== 
+==31860== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

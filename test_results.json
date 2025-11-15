@@ -1,8 +1,8 @@
 {
   "id": "Criterion v2.4.1",
-  "passed": 30,
-  "failed": 40,
-  "errored": 12,
+  "passed": 32,
+  "failed": 38,
+  "errored": 10,
   "skipped": 0,
   "test_suites": [
     {
@@ -507,13 +507,13 @@
           "messages": ["The test crashed."]
         },
         {
-          "name": "expr02",
+          "name": "expr01",
           "assertions": 0,
           "status": "ERRORED",
           "messages": ["The test crashed."]
         },
         {
-          "name": "expr01",
+          "name": "expr02",
           "assertions": 0,
           "status": "ERRORED",
           "messages": ["The test crashed."]
@@ -522,22 +522,20 @@
     },
     {
       "name": "base_create_matrix",
-      "passed": 0,
-      "failed": 2,
-      "errored": 2,
+      "passed": 2,
+      "failed": 0,
+      "errored": 0,
       "skipped": 0,
       "tests": [
         {
-          "name": "create01",
-          "assertions": 0,
-          "status": "ERRORED",
-          "messages": ["The test crashed."]
+          "name": "create02",
+          "assertions": 4,
+          "status": "PASSED"
         },
         {
-          "name": "create02",
-          "assertions": 0,
-          "status": "ERRORED",
-          "messages": ["The test crashed."]
+          "name": "create01",
+          "assertions": 4,
+          "status": "PASSED"
         }
       ]
     }

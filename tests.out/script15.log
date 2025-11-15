@@ -1,24 +1,24 @@
-==21032== Memcheck, a memory error detector
-==21032== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
-==21032== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
-==21032== Command: ./bin/execute_script script15
-==21032== 
-execute_script: src/hw7.c:101: print_matrix_sf: Assertion `mat != NULL' failed.
-==21032== 
-==21032== Process terminating with default action of signal 6 (SIGABRT)
-==21032==    at 0x4947608: __pthread_kill_implementation (pthread_kill.c:44)
-==21032==    by 0x48FCB3B: raise (raise.c:26)
-==21032==    by 0x48E7DFF: abort (abort.c:79)
-==21032==    by 0x48F5CBF: __assert_fail_base (assert.c:96)
-==21032==    by 0x48F5D2F: __assert_fail (assert.c:105)
-==21032==    by 0x10906F: print_matrix_sf (hw7.c:101)
-==21032==    by 0x108B6B: main (execute_script.c:9)
-==21032== 
-==21032== HEAP SUMMARY:
-==21032==     in use at exit: 0 bytes in 0 blocks
-==21032==   total heap usage: 5 allocs, 5 frees, 1,937 bytes allocated
-==21032== 
-==21032== All heap blocks were freed -- no leaks are possible
-==21032== 
-==21032== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==31741== Memcheck, a memory error detector
+==31741== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==31741== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==31741== Command: ./bin/execute_script script15
+==31741== 
+execute_script: src/hw7.c:145: print_matrix_sf: Assertion `mat != NULL' failed.
+==31741== 
+==31741== Process terminating with default action of signal 6 (SIGABRT)
+==31741==    at 0x4947608: __pthread_kill_implementation (pthread_kill.c:44)
+==31741==    by 0x48FCB3B: raise (raise.c:26)
+==31741==    by 0x48E7DFF: abort (abort.c:79)
+==31741==    by 0x48F5CBF: __assert_fail_base (assert.c:96)
+==31741==    by 0x48F5D2F: __assert_fail (assert.c:105)
+==31741==    by 0x109377: print_matrix_sf (hw7.c:145)
+==31741==    by 0x108B6B: main (execute_script.c:9)
+==31741== 
+==31741== HEAP SUMMARY:
+==31741==     in use at exit: 0 bytes in 0 blocks
+==31741==   total heap usage: 5 allocs, 5 frees, 1,937 bytes allocated
+==31741== 
+==31741== All heap blocks were freed -- no leaks are possible
+==31741== 
+==31741== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 Aborted (core dumped)
