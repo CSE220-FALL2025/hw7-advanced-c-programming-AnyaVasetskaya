@@ -297,43 +297,8 @@ matrix_sf *execute_script_sf(char *filename) {
         char name = *p;
         p++;
         while (*p == ' ') p++;
-        if (*p != '=') continue;
-        p++;
-        while (*p == ' ') p++;
-
-        if (isdigit(*p)) {
-            int nr = strtol(p, &p, 10);
-            int nc = strtol(p, &p, 10);
-            while (*p && *p != '[') p++;
-            if (!*p) continue;
-            p++;
-
-            int **vals = malloc(sizeof(int*) * nr);
-            for (int i = 0; i < nr; i++) vals[i] = malloc(sizeof(int) * nc);
-
-            for (int r = 0; r < nr; r++) {
-                for (int c = 0; c < nc; c++) {
-                    vals[r][c] = strtol(p, &p, 10);
-                }
-                while (*p && *p != ';') p++;
-                if (*p == ';') p++;
-            }
-
-            matrix_sf *m = create_matrix_sf(name, nr, nc, vals);
-            for (int i = 0; i < nr; i++) free(vals[i]);
-            free(vals);
-
-            root = insert_bst_sf(root, m);
-            result = m;
-
-        } else {
-            matrix_sf *m = evaluate_expr_sf(name, p, root);
-            root = insert_bst_sf(root, m);
-            result = m;
-        }
     }
 
-    if (line) free(line);
     fclose(file);
     return result;
 }
