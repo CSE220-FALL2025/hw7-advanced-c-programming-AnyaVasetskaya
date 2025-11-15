@@ -1,24 +1,24 @@
-==31792== Memcheck, a memory error detector
-==31792== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
-==31792== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
-==31792== Command: ./bin/execute_script script20
-==31792== 
+==34374== Memcheck, a memory error detector
+==34374== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==34374== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==34374== Command: ./bin/execute_script script20
+==34374== 
 execute_script: src/hw7.c:145: print_matrix_sf: Assertion `mat != NULL' failed.
-==31792== 
-==31792== Process terminating with default action of signal 6 (SIGABRT)
-==31792==    at 0x4947608: __pthread_kill_implementation (pthread_kill.c:44)
-==31792==    by 0x48FCB3B: raise (raise.c:26)
-==31792==    by 0x48E7DFF: abort (abort.c:79)
-==31792==    by 0x48F5CBF: __assert_fail_base (assert.c:96)
-==31792==    by 0x48F5D2F: __assert_fail (assert.c:105)
-==31792==    by 0x109377: print_matrix_sf (hw7.c:145)
-==31792==    by 0x108B6B: main (execute_script.c:9)
-==31792== 
-==31792== HEAP SUMMARY:
-==31792==     in use at exit: 0 bytes in 0 blocks
-==31792==   total heap usage: 5 allocs, 5 frees, 1,937 bytes allocated
-==31792== 
-==31792== All heap blocks were freed -- no leaks are possible
-==31792== 
-==31792== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==34374== 
+==34374== Process terminating with default action of signal 6 (SIGABRT)
+==34374==    at 0x4947608: __pthread_kill_implementation (pthread_kill.c:44)
+==34374==    by 0x48FCB3B: raise (raise.c:26)
+==34374==    by 0x48E7DFF: abort (abort.c:79)
+==34374==    by 0x48F5CBF: __assert_fail_base (assert.c:96)
+==34374==    by 0x48F5D2F: __assert_fail (assert.c:105)
+==34374==    by 0x109377: print_matrix_sf (hw7.c:145)
+==34374==    by 0x108B6B: main (execute_script.c:9)
+==34374== 
+==34374== HEAP SUMMARY:
+==34374==     in use at exit: 0 bytes in 0 blocks
+==34374==   total heap usage: 5 allocs, 5 frees, 1,937 bytes allocated
+==34374== 
+==34374== All heap blocks were freed -- no leaks are possible
+==34374== 
+==34374== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 Aborted (core dumped)

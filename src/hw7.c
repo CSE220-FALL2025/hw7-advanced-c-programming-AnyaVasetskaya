@@ -72,7 +72,7 @@ matrix_sf* mult_mats_sf(const matrix_sf *mat1, const matrix_sf *mat2) {
             for(int k = 0; k < common; k++) {
                 sum += mat1->values[i * common + k] * mat2->values[k * cols + j];
             }
-            result->values[i * common + j] = sum;
+            result->values[i * cols + j] = sum;
         }
     }
     
@@ -180,18 +180,20 @@ char* infix2postfix_sf(char *infix) {
             while (top >= 0 && stack[top] != '(') {
                 out[out_i++] = stack[top--];
             }
-            top--;
+            if (top >= 0 && stack[top] == '(') top--;
             continue;
         }
 
-        if (c == '+' || c == '*' || c == '\'') {
-            int p = highest(c);
+        if (c == '\'') {
+            out[out_i++] = '\'';
+            continue;
+        }
 
-            while (top >= 0 && (c == '+' || c == '*' || c == '\'') &&
-                   highest(stack[top]) >= p) {
+        if (c == '+' || c == '*') {
+            int p = highest(c);
+            while (top >= 0 && stack[top] != '(' && highest(stack[top]) >= p) {
                 out[out_i++] = stack[top--];
             }
-
             stack[++top] = c;
             continue;
         }
